@@ -1,0 +1,21 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: prometheus
+  namespace: monitoring
+data:
+  prometheus.yml: |-
+    global:
+      scrape_interval: 10s
+      scrape_timeout: 10s
+      evaluation_interval: 10s
+
+    scrape_configs:
+
+    #pushgateway job
+      - job_name: 'pushgateway'
+        scrape_interval: 1s
+        static_configs:
+        - targets: ['192.168.49.2:30911']
