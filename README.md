@@ -1,5 +1,7 @@
 # FFEncoding
+```
 $ git clone https://github.com/katiadesimone/FFEncoding.git 
+```
 ## Deploy Minikube
 ci spostiamo nella cartella Prometheus, dove ci sono i file .yaml da deployare su Minikube
 $ start minikube
