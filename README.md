@@ -21,8 +21,9 @@ kubectl create namespace monitoring
 kubectl apply -f [file YAML]
 ```
 ## Deploy Docker Image
-Terminati i deploy ci spostiamo nella cartella ApplicationEncoding:
-1.creiamo l'immagine docker a partire dal Dockerfile ed il contesto contenuti nella cartella;
+Terminati i deploy ci spostiamo nella cartella ApplicationEncoding.
+
+1. creiamo l'immagine docker a partire dal Dockerfile ed il contesto contenuti nella cartella;
 ```
 docker build dockerapp
 ```
