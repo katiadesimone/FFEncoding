@@ -18,14 +18,16 @@ kubectl create namespace monitoring
 ```
 3. deployare i vari pod contenuti nella cartella corrente.
 ```
-kubectl apply -f file.yaml
+kubectl apply -f [file YAML]
 ```
 ## Deploy Docker Image
-Terminati i deploy ci spostiamo nella cartella ApplicationEncoding e creiamo l'immagine docker a partire dal Dockerfile ed il contesto contenuti nella cartella:
+Terminati i deploy ci spostiamo nella cartella ApplicationEncoding:
+1.creiamo l'immagine docker a partire dal Dockerfile ed il contesto contenuti nella cartella;
 ```
 docker build dockerapp
 ```
-Poi pushiamo l'immagine in Docker Hub in modo da essere reperibile per il deploy su minikube:
+2. Poi ho pushato l'immagine in Docker Hub in modo da essere reperibile per il deploy su minikube;
+3. Infine, possiamo deployare il pod basato sull'immagine creata con il seguente comando:
 ```
-kubectl run ffmpegApp--image=katiadesimone/progetto:v1.3 -n monitoring
+kubectl run ffmpeg --image=katiadesimone/progetto:v1.3 -n monitoring
 ```
